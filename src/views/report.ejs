@@ -5760,24 +5760,23 @@
         </td>
       </tr>
 
-
 <% let serialNumber = 1; %>
-<% vulnerability_names.forEach(function(name) { %>
+<% groupedVulnerabilities.forEach(function(data) { %>
 <tr style="height: 22.9pt">
   <td colspan="5" style="border-top-style: solid; border-top-width: 0.75pt; border-bottom-style: solid; border-bottom-width: 0.75pt; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
     <div style="margin: 0pt; padding-left: 0pt">
       <div style="text-align: center; font-family: 'Times New Roman'; font-size: 14pt; font-weight: bold; list-style-position: inside;">
-        <%= serialNumber %>. <%= name %>&nbsp;
+        <%= serialNumber %>. <%= data.vulnerability %>&nbsp;
       </div>
     </div>
   </td>
 </tr>
 <% let rowNumber = 1; %>
-<% vuln_point_data.forEach(function(data) { %>
+<% data.data.forEach(function(data){%>
 <tr style="height: 52.45pt">
   <td style="width: 8.96%; border-top-style: solid; border-top-width: 0.75pt; border-right-style: solid; border-right-width: 0.75pt; border-bottom-style: solid; border-bottom-width: 0.75pt; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
     <p style="margin-top: 0pt; margin-left: 21.25pt; margin-bottom: 0pt; text-indent: -21.25pt; text-align: center; font-size: 12pt;">
-      <strong><span style="font-family: 'Times New Roman'"><%= serialNumber %>.<%= rowNumber %></span></strong>
+      <strong><span style="font-family: 'Times New Roman'"><%= serialNumber %>.<%= rowNumber%></span></strong>
       <span style="width: 6.25pt; font: 7pt 'Times New Roman'; display: inline-block;">&nbsp;&nbsp;&nbsp;&nbsp;</span>
       <strong><span style="font-family: 'Times New Roman'">&nbsp;</span></strong>
     </p>
@@ -5804,12 +5803,17 @@
   </td>
 </tr>
 <% rowNumber++; %>
-<% }); %>
+<%});%>
+
 <% serialNumber++; %>
 <% }); %>
 
+
     </tbody>
   </table>
+  
+  
+
   <p
     style="
       margin-top: 0pt;
@@ -5824,98 +5828,11 @@
       ></strong
     >
   </p>
+
   <p
     style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p><p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-  <p
-    style="
-      margin-top: 0pt;
+      page-break-before: always; 
+      margin-top: 15vh;
       margin-bottom: 6pt;
       text-align: center;
       line-height: 115%;
@@ -5930,6 +5847,8 @@
   </p>
   <p
     style="
+      margin-left: 1vw;
+      margin-right: 1vw; 
       margin-top: 0pt;
       margin-bottom: 0pt;
       text-align: justify;
@@ -5958,12 +5877,14 @@
       ></strong
     >
   </p>
-  <div style="text-align: center">
+  <% let observed_serialNumber = 1; %>
+  <% vuln_point_data.forEach(function(data) { %> 
+    <div style="text-align: center; margin-bottom: 20px;"> 
     <table
       cellspacing="0"
       cellpadding="0"
       style="
-        width: 465.5pt;
+        width: 500pt;
         margin-right: auto;
         margin-left: auto;
         border: 0.75pt solid #000000;
@@ -6023,11 +5944,12 @@
                   font-weight: bold;
                 "
               >
-                &nbsp;
+               <%=data.vulnerability%> 
               </li>
             </ol>
           </td>
         </tr>
+  
         <tr style="height: 17.1pt">
           <td
             style="
@@ -6043,6 +5965,7 @@
               vertical-align: top;
             "
           >
+         
             <p
               style="
                 margin-top: 0pt;
@@ -6084,7 +6007,7 @@
               "
             >
               <strong
-                ><span style="font-family: 'Times New Roman'">1.1</span></strong
+                ><span style="font-family: 'Times New Roman'"><%= data.vulnerable_point_location %></span></strong
               ><span
                 style="
                   width: 6.25pt;
@@ -6487,9 +6410,13 @@
             </ul>
           </td>
         </tr>
+      
       </tbody>
     </table>
+    
   </div>
+  <% observed_serialNumber++; %>
+<% }); %>
   <div style="page-break-before: always;"></div>
 
   <p
