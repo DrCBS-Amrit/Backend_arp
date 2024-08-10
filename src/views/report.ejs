@@ -46,10 +46,10 @@
       font-size: 22pt;
     "
   >
-    <strong
-      ><span style="font-family: 'Times New Roman'; background-color: #ffff00"
-        >&lt;Organization Name&gt;</span
-      ></strong
+      <strong
+        ><span style="font-family: 'Times New Roman'; background-color: #ffff00"
+          ><%=organizationName%></span
+        ></strong
     >
   </p>
   <p
@@ -5878,7 +5878,8 @@
     >
   </p>
   <% let observed_serialNumber = 1; %>
-  <% vuln_point_data.forEach(function(data) { %> 
+  <% groupedVulnerabilities.forEach(function(data) { %>
+   
     <div style="text-align: center; margin-bottom: 20px;"> 
     <table
       cellspacing="0"
@@ -6007,7 +6008,7 @@
               "
             >
               <strong
-                ><span style="font-family: 'Times New Roman'"><%= data.vulnerable_point_location %></span></strong
+                ><span style="font-family: 'Times New Roman'"> <% data.data.forEach(function(data){%><%= data.vulnerable_point_location %><br> <%});%></span></strong
               ><span
                 style="
                   width: 6.25pt;
@@ -6295,18 +6296,26 @@
                 ></strong
               >
             </p>
-            <p
-              style="
-                margin-top: 0pt;
-                margin-bottom: 0pt;
-                line-height: 115%;
-                font-size: 12pt;
-              "
-            >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
-            </p>
+            <!-- <% screenshotFiles.forEach(function(file) { %> -->
+             
+              <p
+                style="
+                  margin-top: 0pt;
+                  margin-bottom: 0pt;
+                  line-height: 115%;
+                  font-size: 12pt;
+                "
+              >
+              <span style="font-family: 'Times New Roman'">
+                <% data.data.forEach(function(data){%><img src="<%= data.screenshot_files%>" height="200px" width="600px" alt="Screenshot">
+                <%});%>
+              </span>
+              
+              </p>
+          <!-- <% }); %> -->
           </td>
         </tr>
+        
         <tr>
           <td
             colspan="2"
@@ -6416,7 +6425,8 @@
     
   </div>
   <% observed_serialNumber++; %>
-<% }); %>
+  <%});%>
+
   <div style="page-break-before: always;"></div>
 
   <p
