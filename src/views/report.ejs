@@ -443,11 +443,13 @@
   </p>
   <p
     style="
-      margin-top: 0pt;
+      margin-top: 100pt;
       margin-bottom: 10pt;
       text-align: center;
       line-height: 115%;
       font-size: 26pt;
+      page-break-before: always;
+
     "
   >
     <strong
@@ -540,6 +542,7 @@
               margin-bottom: 1.7pt;
               text-align: center;
               font-size: 14pt;
+              
             "
           >
             <strong
@@ -5881,7 +5884,13 @@
   </p>
   <% let observed_serialNumber = 1; %>
   <% groupedVulnerabilities.forEach(function(data) { %>
-   
+
+  <p>helooddfdfdfdfdfd </p>
+  <p>helooddfdfdfdfdfd </p>
+  <p>helooddfdfdfdfdfd </p>
+  <p>helooddfdfdfdfdfd</p>
+  <p>helooddfdfdfdfdfd  <% data.data.forEach(function(data){%><%=data.reference%><%});%></p>
+  
     <div style="text-align: center; margin-bottom: 20px;"> 
     <table
       cellspacing="0"
@@ -6078,7 +6087,7 @@
                 font-size: 12pt;
               "
             >
-              <span style="font-family: 'Times New Roman'"><%= data.CWE %> <span>
+              <span style="font-family: 'Times New Roman'"><% data.data.forEach(function(data){%><%=data.cwe%><%});%> <span>
               
             </p>
           </td>
@@ -6137,7 +6146,7 @@
                 font-size: 12pt;
               "
             >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
+              <span style="font-family: 'Times New Roman'"><% data.data.forEach(function(data){%> <%=data.severity%><%});%></span>
             </p>
           </td>
         </tr>
@@ -6225,7 +6234,7 @@
                 ><span style="font-family: 'Times New Roman'"
                   >6. Vulnerability Description:</span
                 ></strong
-              ><span style="font-family: 'Times New Roman'">&nbsp;</span>
+              ><span style="font-family: 'Times New Roman'"><% data.data.forEach(function(data){%> <%=data.description%><%});%></span>
             </p>
             <p
               style="
@@ -6299,7 +6308,6 @@
                 ></strong
               >
             </p>
-            <!-- <% screenshotFiles.forEach(function(file) { %> -->
              
               <p
                 style="
@@ -6315,7 +6323,6 @@
               </span>
               
               </p>
-          <!-- <% }); %> -->
           </td>
         </tr>
         
@@ -6366,7 +6373,7 @@
                     display: inline-block;
                   "
                   >&nbsp;&nbsp;</span
-                ><span style="font-family: 'Times New Roman'">&nbsp;</span>
+                ><span style="font-family: 'Times New Roman'"></span>
               </li>
             </ul>
           </td>
@@ -6416,7 +6423,7 @@
                   "
                   >&nbsp;&nbsp;</span
                 ><span style="font-family: 'Times New Roman'; color: #605e5c"
-                  >&nbsp;</span
+                  ><%=data.reference%></span
                 >
               </li>
             </ul>
