@@ -125,7 +125,7 @@
     "
   ><strong
       ><span style="font-family: 'Times New Roman'"
-        >&lt;Day,Date&gt;</span
+        ><%=Enddate%></span
       ></strong
     >
   </p>
@@ -241,7 +241,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=startdate%></span
               ></strong
             >
           </p>
@@ -303,7 +303,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                >Web Application Security Audit</span
               ></strong
             >
           </p>
@@ -365,7 +365,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                >Level 1 Audit Report</span
               ></strong
             >
           </p>
@@ -423,7 +423,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=startdate %> to <%=Enddate %></span
               ></strong
             >
           </p>
@@ -512,7 +512,8 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'; color: #4b809b"
-                >&nbsp;</span
+                >Level-1 Web Application Security Audit Report of
+                <%=website_name%> V1.0</span
               ></strong
             >
           </p>
@@ -572,7 +573,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'; color: #4b809b"
-                >&nbsp;</span
+                ><%=docId%></span
               ></strong
             >
           </p>
@@ -632,7 +633,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'; color: #4b809b"
-                >&nbsp;</span
+                >1.0</span
               ></strong
             >
           </p>
@@ -691,7 +692,7 @@
               font-size: 14pt;
             "
           >
-            <span style="font-family: 'Times New Roman'">&nbsp;</span>
+            <span style="font-family: 'Times New Roman'"><%=VerifBy%></span>
           </p>
         </td>
       </tr>
@@ -749,7 +750,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'; color: #4b809b"
-                >&nbsp;</span
+                ><%=Apprby%></span
               ></strong
             >
           </p>
@@ -809,7 +810,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'; color: #4b809b"
-                >&nbsp;</span
+                ><%=releby%></span
               ></strong
             >
           </p>
@@ -865,7 +866,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'; color: #4b809b"
-                >&nbsp;</span
+                ><%=Enddate%></span
               ></strong
             >
           </p>
@@ -1069,7 +1070,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=releby%></span
               ></strong
             >
           </p>
@@ -1099,7 +1100,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=organizationName%></span
               ></strong
             >
           </p>
@@ -1128,7 +1129,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=designation%></span
               ></strong
             >
           </p>
@@ -1155,7 +1156,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=email%></span
               ></strong
             >
           </p>
@@ -1648,7 +1649,6 @@
   </p>
   <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
   <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-  <div style="">
   <p
     style="
       margin-top: 0pt;
@@ -1656,6 +1656,7 @@
       text-align: center;
       line-height: 115%;
       font-size: 20pt;
+      page-break-before: always;
     "
   >
     <strong
@@ -1678,13 +1679,13 @@
     ><strong><span style="font-family: 'Times New Roman'">&nbsp;</span></strong
     ><strong
       ><span style="font-family: 'Times New Roman'; background-color: #ffff00"
-        >&lt;Audit Name&gt;</span
+        ><%=website_name%></span
       ></strong
     ><strong><span style="font-family: 'Times New Roman'">,&nbsp;</span></strong
     ><span style="font-family: 'Times New Roman'">hosted at&nbsp;</span
-    ><span style="font-family: 'Times New Roman'; background-color: #ffff00"
-      >&lt;URL&gt;</span
-    >
+    ><b><span style="font-family: 'Times New Roman'; background-color: #ffff00"
+      ><%=url%></span
+    ></b>
   </p>
   <p
     style="
@@ -1706,7 +1707,7 @@
           font-size: 14pt;
           background-color: #ffff00;
         "
-        >{Work Order No.:}&nbsp;</span
+        ><%=workOrder%></span
       ></strong
     ><span
       style="line-height: 115%; font-family: 'Times New Roman'; font-size: 14pt"
@@ -1811,7 +1812,7 @@
             >
               <strong
                 ><span style="font-family: 'Times New Roman'"
-                  >Website/ Portal Name</span
+                  >Website Name</span
                 ></strong
               >
             </p>
@@ -1893,7 +1894,7 @@
             >
               <strong
                 ><span style="font-family: 'Times New Roman'"
-                  >&nbsp;</span
+                  ><%=website_name%></span
                 ></strong
               >
             </p>
@@ -1920,7 +1921,7 @@
             >
               <strong
                 ><span style="font-family: 'Times New Roman'"
-                  >&nbsp;</span
+                  ><%=url%></span
                 ></strong
               >
             </p>
@@ -1945,6 +1946,7 @@
       ></strong
     >
   </p>
+  <br><br><br><br><br><br>
   <p
     style="
       margin-top: 0pt;
@@ -2216,7 +2218,7 @@
             >
               <strong
                 ><span style="font-family: 'Times New Roman'"
-                  >&nbsp;</span
+                  ><%=website_name%></span
                 ></strong
               >
             </p>
@@ -2243,7 +2245,7 @@
                 font-size: 14pt;
               "
             >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
+              <span style="font-family: 'Times New Roman'"><%=url%></span>
             </p>
           </td>
           <td
@@ -2268,7 +2270,7 @@
                 font-size: 14pt;
               "
             >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
+              <span style="font-family: 'Times New Roman'"><%=location%></span>
             </p>
           </td>
           <td
@@ -2293,7 +2295,7 @@
                 font-size: 14pt;
               "
             >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
+              <span style="font-family: 'Times New Roman' te"><%=hash%></span>
             </p>
           </td>
           <td
@@ -2316,7 +2318,7 @@
                 font-size: 14pt;
               "
             >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
+              <span style="font-family: 'Times New Roman'">1.0</span>
             </p>
           </td>
         </tr>
@@ -3263,7 +3265,7 @@
               font-size: 14pt;
             "
           >
-            <span style="font-family: 'Times New Roman'">&nbsp;</span>
+            <span style="font-family: 'Times New Roman'"><%=wre%></span>
           </p>
         </td>
       </tr>
@@ -3321,7 +3323,7 @@
               font-size: 14pt;
             "
           >
-            <span style="font-family: 'Times New Roman'">&nbsp;</span>
+            <span style="font-family: 'Times New Roman'"><%=ur%></span>
           </p>
         </td>
       </tr>
@@ -3351,7 +3353,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >** Report Submitted&nbsp;</span
+                >Report Submitted&nbsp;</span
               ></strong
             >
           </p>
@@ -3379,7 +3381,7 @@
               font-size: 14pt;
             "
           >
-            <span style="font-family: 'Times New Roman'">&nbsp;</span>
+            <span style="font-family: 'Times New Roman'"><%=Enddate%></span>
           </p>
         </td>
       </tr>
@@ -3433,7 +3435,7 @@
               font-size: 14pt;
             "
           >
-            <span style="font-family: 'Times New Roman'">&nbsp;</span>
+            <span style="font-family: 'Times New Roman'"><%=startdate%> TO <%=Enddate%></span>
           </p>
         </td>
       </tr>
@@ -5793,12 +5795,12 @@
   </td>
   <td style="width: 16.58%; border-style: solid; border-width: 0.75pt; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
     <p style="margin-top: 0pt; margin-bottom: 0pt; text-align: center; font-size: 12pt;">
-      <strong><span style="font-family: 'Times New Roman'"><%= data.means_of_identification %></span></strong>
+      <strong><span style="font-family: 'Times New Roman'">Manual</span></strong>
     </p>
   </td>
   <td style="width: 22%; border-top-style: solid; border-top-width: 0.75pt; border-left-style: solid; border-left-width: 0.75pt; border-bottom-style: solid; border-bottom-width: 0.75pt; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
     <p style="margin-top: 0pt; margin-bottom: 0pt; text-align: center; font-size: 12pt;">
-      <strong><span style="font-family: 'Times New Roman'"><%= data.comments_review %></span></strong>
+      <strong><span style="font-family: 'Times New Roman'"><%= data.CWE %></span></strong>
     </p>
   </td>
 </tr>
@@ -6076,7 +6078,8 @@
                 font-size: 12pt;
               "
             >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
+              <span style="font-family: 'Times New Roman'"><%= data.CWE %> <span>
+              
             </p>
           </td>
         </tr>
@@ -6192,7 +6195,7 @@
                 font-size: 12pt;
               "
             >
-              <span style="font-family: 'Times New Roman'">&nbsp;</span>
+              <span style="font-family: 'Times New Roman'">NA</span>
             </p>
           </td>
         </tr>
