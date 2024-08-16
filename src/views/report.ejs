@@ -1,5 +1,7 @@
+<% let pageNumber=1; %>
 <div>
   <div style="clear: both">
+    <div class="page">
 <p>
 <img
     src="https://myfiles.space/user_files/230562_d410107d024c242f/1722583726_01-web-application-security-report-of-1/1722583726_01-web-application-security-report-of-1-3.png"
@@ -22,7 +24,6 @@
       alt=""
     /><br/> -->
     <center><h1 style="color:#5832a8">Level 1 Web Security Report of </h1></center>
-    <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
     
     <center><p style="color:#5832a8"><h1><%=website_name%></h1></p>
     <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
@@ -129,6 +130,13 @@
       ></strong
     >
   </p>
+  <div style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt;">
+    Page <%= pageNumber %>
+  </div>
+</div>
+
+<% pageNumber++; %>
+<div class="page">
   <p
     style="
       margin-top: 0pt;
@@ -146,20 +154,18 @@
   </p>
   <p
     style="
-      margin-top: 0pt;
+      margin-top: 200pt;
       margin-bottom: 10pt;
       text-align: center;
       line-height: 115%;
       font-size: 24pt;
+      page-break-before: always;
+
     "
   ><h1>
     <strong>
-      <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-        <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-        <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-        <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-        <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-      <span style="font-family: 'Times New Roman'">
+      
+      <span style="font-family: 'Times New Roman'; margin-left:90pt">
         Level 1 Application Security Report</span
       ></strong
     >
@@ -170,7 +176,7 @@
   <table
     cellspacing="0"
     cellpadding="0"
-    style="border: 0.75pt solid #000000; border-collapse: collapse"
+    style="border: 0.75pt solid #000000; border-collapse: collapse ;margin-left: 30pt"
   >
     <tbody>
       <tr style="height: 4.5pt">
@@ -361,6 +367,7 @@
               text-align: center;
               line-height: 115%;
               font-size: 18pt;
+              
             "
           >
             <strong
@@ -431,6 +438,11 @@
       </tr>
     </tbody>
   </table>
+  <div class="footer" style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 50vh;">
+    Page <%= pageNumber %>
+  </div>
+  </div>
+  <% pageNumber++; %>
   <p
     style="
       margin-top: 0pt;
@@ -441,6 +453,7 @@
   >
     <br style="page-break-before: always; clear: both" />
   </p>
+  <div class="page">
   <p
     style="
       margin-top: 100pt;
@@ -461,7 +474,7 @@
   <table
     cellspacing="0"
     cellpadding="0"
-    style="border: 0.75pt solid #000000; border-collapse: collapse"
+    style="border: 0.75pt solid #000000; border-collapse: collapse; margin-left: 30pt;"
   >
     <tbody>
       <tr>
@@ -668,6 +681,62 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
+                >Prepared by</span
+              ></strong
+            >
+          </p>
+        </td>
+        <td
+          style="
+            width: 299.3pt;
+            border-top-style: solid;
+            border-top-width: 0.75pt;
+            border-left-style: solid;
+            border-left-width: 0.75pt;
+            border-bottom-style: solid;
+            border-bottom-width: 0.75pt;
+            padding-right: 5.03pt;
+            padding-left: 5.03pt;
+            vertical-align: middle;
+          "
+        >
+          <p
+            style="
+              margin-top: 2.9pt;
+              margin-bottom: 1.7pt;
+              text-align: center;
+              font-size: 14pt;
+            "
+          >
+            <span style="font-family: 'Times New Roman'"><%=prepBy%></span>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td
+          style="
+            width: 191.3pt;
+            border-top-style: solid;
+            border-top-width: 0.75pt;
+            border-right-style: solid;
+            border-right-width: 0.75pt;
+            border-bottom-style: solid;
+            border-bottom-width: 0.75pt;
+            padding-right: 5.03pt;
+            padding-left: 5.03pt;
+            vertical-align: middle;
+          "
+        >
+          <p
+            style="
+              margin-top: 2.9pt;
+              margin-bottom: 1.7pt;
+              text-align: center;
+              font-size: 14pt;
+            "
+          >
+            <strong
+              ><span style="font-family: 'Times New Roman'"
                 >Verified by</span
               ></strong
             >
@@ -695,7 +764,11 @@
               font-size: 14pt;
             "
           >
-            <span style="font-family: 'Times New Roman'"><%=VerifBy%></span>
+            <strong
+              ><span style="font-family: 'Times New Roman'; color: #4b809b"
+                ><%=VerifBy%></span
+              ></strong
+            >
           </p>
         </td>
       </tr>
@@ -725,66 +798,6 @@
             <strong
               ><span style="font-family: 'Times New Roman'"
                 >Approved by</span
-              ></strong
-            >
-          </p>
-        </td>
-        <td
-          style="
-            width: 299.3pt;
-            border-top-style: solid;
-            border-top-width: 0.75pt;
-            border-left-style: solid;
-            border-left-width: 0.75pt;
-            border-bottom-style: solid;
-            border-bottom-width: 0.75pt;
-            padding-right: 5.03pt;
-            padding-left: 5.03pt;
-            vertical-align: middle;
-          "
-        >
-          <p
-            style="
-              margin-top: 2.9pt;
-              margin-bottom: 1.7pt;
-              text-align: center;
-              font-size: 14pt;
-            "
-          >
-            <strong
-              ><span style="font-family: 'Times New Roman'; color: #4b809b"
-                ><%=Apprby%></span
-              ></strong
-            >
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td
-          style="
-            width: 191.3pt;
-            border-top-style: solid;
-            border-top-width: 0.75pt;
-            border-right-style: solid;
-            border-right-width: 0.75pt;
-            border-bottom-style: solid;
-            border-bottom-width: 0.75pt;
-            padding-right: 5.03pt;
-            padding-left: 5.03pt;
-            vertical-align: middle;
-          "
-        >
-          <p
-            style="
-              margin-top: 2.9pt;
-              margin-bottom: 1.7pt;
-              text-align: center;
-              font-size: 14pt;
-            "
-          >
-            <strong
-              ><span style="font-family: 'Times New Roman'"
-                >Released by</span
               ></strong
             >
           </p>
@@ -910,7 +923,7 @@
   <table
     cellspacing="0"
     cellpadding="0"
-    style="border: 0.75pt solid #000000; border-collapse: collapse"
+    style="border: 0.75pt solid #000000; border-collapse: collapse ; margin-left: 30pt"
   >
     <tbody>
       <tr>
@@ -936,7 +949,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >Document  Distribution List</span
+                >Document Distribution List</span
               ></strong
             >
           </p>
@@ -1167,6 +1180,12 @@
       </tr>
     </tbody>
   </table>
+  <div class="footer" style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 30vh">
+    Page <%= pageNumber %>
+  </div>
+  </div>
+  <% pageNumber++; %>
+  <div class="page">
   <p
     style="
       margin-top: 0pt;
@@ -1233,11 +1252,13 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
       ><span style="font-family: 'Times New Roman'">Introduction</span></strong
-    ><strong
+    >
+    <strong
       ><span
         style="
           width: 406.28pt;
@@ -1254,6 +1275,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1277,6 +1299,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1300,6 +1323,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1323,6 +1347,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1346,6 +1371,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1369,6 +1395,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1392,6 +1419,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1415,6 +1443,7 @@
       margin-bottom: 0pt;
       line-height: normal;
       font-size: 16pt;
+      margin-left: 30pt;
     "
   >
     <strong
@@ -1443,205 +1472,15 @@
         ></span
       ></strong
     ><strong><span style="font-family: 'Times New Roman'">15</span></strong>
-  </p></div>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
   </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+  <div class='footer' style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 50vh;">
+    Page <%= pageNumber %>
+  </div>
+</div>
+</div>
+<% pageNumber++; %>
+
+ <div class="page">
   <p
     style="
       margin-top: 100pt;
@@ -1979,7 +1818,7 @@
   </p>
   <div style="text-align: center; margin-left: 20pt;
       margin-right: 20pt; " >
-    <table
+    <!-- <table
       cellspacing="0"
       cellpadding="0"
       style="
@@ -1988,6 +1827,7 @@
         margin-left: 9pt;
         border: 0.75pt solid #000000;
         border-collapse: collapse;
+        table-layout: fixed;
         float: left;
       "
     >
@@ -2301,14 +2141,16 @@
           </td>
           <td
             style="
-              width: 48.85pt;
-              border-top-style: solid;
-              border-top-width: 0.75pt;
-              border-left-style: solid;
-              border-left-width: 0.75pt;
-              padding-right: 5.03pt;
-              padding-left: 5.03pt;
-              vertical-align: middle;
+               width: 48.85pt;
+      border-top-style: solid;
+      border-top-width: 0.75pt;
+      border-left-style: solid;
+      border-left-width: 0.75pt;
+      padding-right: 5.03pt;
+      padding-left: 5.03pt;
+      vertical-align: middle;
+      word-wrap: break-word;
+      white-space: normal;
             "
           >
             <p
@@ -2334,30 +2176,398 @@
       line-height: 115%;
       font-size: 20pt;
     "
-  >
-    <br style="page-break-before: always; clear: both" />
-  </p>
+  > -->
+    <!-- <br style="page-break-before: always; clear: both" />
+  </p> -->/
+  <table
+  cellspacing="0"
+  cellpadding="0"
+  style="
+    width: 500.2pt;
+    margin-right: 9pt;
+    margin-left: 9pt;
+    border: 0.75pt solid #000000;
+    border-collapse: collapse;
+    table-layout: fixed; /* This ensures the table respects the defined widths */
+    float: left;
+  "
+>
+  <tbody>
+    <tr style="height: 15.75pt">
+      <td
+        style="
+          width: 29pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-bottom-style: solid;
+          border-bottom-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          background-color: #e5e5e5;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word; /* This will ensure that long words wrap correctly */
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <strong
+            ><span style="font-family: 'Times New Roman'">S.No</span></strong
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 114.2pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          border-bottom-style: solid;
+          border-bottom-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          background-color: #e5e5e5;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <strong
+            ><span style="font-family: 'Times New Roman'"
+              >Website/ Portal Name</span
+            ></strong
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 85.9pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          border-bottom-style: solid;
+          border-bottom-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          background-color: #e5e5e5;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <strong
+            ><span style="font-family: 'Times New Roman'"
+              >Test URL</span
+            ></strong
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 58.35pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          border-bottom-style: solid;
+          border-bottom-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          background-color: #e5e5e5;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <strong
+            ><span style="font-family: 'Times New Roman'"
+              >Location</span
+            ></strong
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 98.35pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          border-bottom-style: solid;
+          border-bottom-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          background-color: #e5e5e5;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <strong
+            ><span style="font-family: 'Times New Roman'"
+              >Hash Value&nbsp;</span
+            ></strong
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 48.85pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          border-bottom-style: solid;
+          border-bottom-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          background-color: #e5e5e5;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <strong
+            ><span style="font-family: 'Times New Roman'"
+              >Version</span
+            ></strong
+          >
+        </p>
+      </td>
+    </tr>
+    <tr style="height: 4.5pt">
+      <td
+        style="
+          width: 29pt;
+          border-top-style: solid;
+          border-top-width: 0.75pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <span style="font-family: 'Times New Roman'">1.</span>
+        </p>
+      </td>
+      <td
+        style="
+          width: 114.2pt;
+          border-top-style: solid;
+          border-top-width: 0.75pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <span style="font-family: 'Times New Roman'"><%=website_name%></span>
+        </p>
+      </td>
+      <td
+        style="
+          width: 85.9pt;
+          border-top-style: solid;
+          border-top-width: 0.75pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <span style="font-family: 'Times New Roman'"
+            ><%=url%></span
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 58.35pt;
+          border-top-style: solid;
+          border-top-width: 0.75pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <span style="font-family: 'Times New Roman'"
+            ><%=location%></span
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 98.35pt;
+          border-top-style: solid;
+          border-top-width: 0.75pt;
+          border-right-style: solid;
+          border-right-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <span style="font-family: 'Times New Roman'"
+            ><%=hash%></span
+          >
+        </p>
+      </td>
+      <td
+        style="
+          width: 48.85pt;
+          border-top-style: solid;
+          border-top-width: 0.75pt;
+          border-left-style: solid;
+          border-left-width: 0.75pt;
+          padding-right: 5.03pt;
+          padding-left: 5.03pt;
+          vertical-align: middle;
+          word-wrap: break-word;
+          white-space: normal;
+          overflow-wrap: break-word;
+        "
+      >
+        <p
+          style="
+            margin-top: 0pt;
+            margin-bottom: 0pt;
+            text-align: center;
+            font-size: 14pt;
+          "
+        >
+          <span style="font-family: 'Times New Roman'">1.0</span>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class='footer' style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 30vh;">
+  Page <%= pageNumber %>
 </div>
-<p>
-  <br
-    style="
-      page-break-before: always;
-      clear: both;
-      mso-break-type: section-break;
-    "
-  />
-</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-<p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
-
+</div>
+</div>
+<% pageNumber++ ; %>
+<div class="page">
 <div>
   <p
     style="
@@ -2600,7 +2810,7 @@
                 list-style-position: inside;
               "
             >
-              &nbsp;
+              <%=audit_stats%>
             </li>
           </ol>
         </td>
@@ -2625,7 +2835,7 @@
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=desig%></span
               ></strong
             >
           </p>
@@ -2926,202 +3136,12 @@
       </tr>
     </tbody>
   </table>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 20pt;
-    "
-  >
-    <strong
-      ><span style="font-family: 'Times New Roman'; color: #2d74b5"
-        >&nbsp;</span
-      ></strong
-    >
-  </p>
-  
+  <div class='footer' style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 50vh;">
+    Page <%= pageNumber %>
+  </div>
+  </div>
+  <% pageNumber++ ; %>
+  <div class="page"> 
   <p
     style="
       margin-top: 100pt;
@@ -3315,7 +3335,7 @@
               font-size: 14pt;
             "
           >
-            <span style="font-family: 'Times New Roman'"><%=ur%></span>
+            <span style="font-family: 'Times New Roman'"><%=url%></span>
           </p>
         </td>
       </tr>
@@ -3526,106 +3546,12 @@
       >A comprehensive IT security audit of the web application was performed as per legal mandate and based on web application security Standards of Open Web Application Security Project (OWASP) Top 10:2021 Risks, SANS Top 25 Software Errors, Common Weakness Enumeration (CWE), Common Vulnerabilities and Exposures (CVE) etc.</span
     >
   </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 12pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-
+  <div  class="footer" style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 30vh;">
+    Page <%= pageNumber %>
+  </div>
+  </div>
+  <% pageNumber++ ; %>
+  <div class="page">
   <p
     style="
       margin-top: 100pt;
@@ -4960,6 +4886,12 @@
       </tr>
     </tbody>
   </table>
+  <div class='footer' style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 50vh;">
+    Page <%= pageNumber %>
+  </div>
+  </div>
+  <% pageNumber++ ; %>
+  <div class="page">
   <p
     style="
       margin-top: 0pt;
@@ -5777,9 +5709,12 @@
 
     </tbody>
   </table>
-  
-  
-
+  <div class="footer" style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 30vh;">
+    Page <%= pageNumber %>
+  </div>
+  </div>
+  <% pageNumber++ ; %>
+<div class="page">
   <p
     style="
       margin-top: 0pt;
@@ -6388,12 +6323,15 @@
       
       </tbody>
     </table>
-    
+    <div class="footer" style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 30vh;">
+      Page <%= pageNumber %>
+    </div>  
   </div>
   <% observed_serialNumber++; %>
   <%});%>
-
-
+</div>
+<% pageNumber++ ; %>
+<div class="page">
   <p
     style="
       margin-top: 100pt;
@@ -6425,171 +6363,12 @@
       >The developer team of auditee is advised to provide the compliance as per mentioned recommendation in details of the vulnerabilities at the earliest. Ensure that security is properly integrated in all phases of the development process and developers are aware with common web application vulnerabilities. We recommend the Guidelines for Secure Application Design, Development, Implementation & Operations issued by Indian Computer Emergency Response Team (CERT-In), Ministry of Electronics and Information Technology Government of India. Conduct the regular external and internal audit to enhance the security posture of the application</span
     >
   </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
-  <p
-    style="
-      margin-top: 0pt;
-      margin-bottom: 10pt;
-      text-align: justify;
-      line-height: 115%;
-      font-size: 14pt;
-    "
-  >
-    <span style="font-family: 'Times New Roman'">&nbsp;</span>
-  </p>
+  <div class="footer" style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 50vh;">
+    Page <%= pageNumber %>
+  </div>
+  </div>
+  <% pageNumber++ ; %>
+  <div class="page">
 
   <p
   style="
@@ -6716,8 +6495,11 @@
   >
     <span style="font-family: 'Times New Roman'">&nbsp;</span>
   </p>
-
-  <div style="clear: both">
+  <div class="footer" style="text-align: center; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 30vh;">
+    Page <%= pageNumber %>
+  </div> 
+</div>
+  <!-- <div style="clear: both">
     <p style="margin-top: 0pt; margin-bottom: 0pt; line-height: normal">
       <span style="font-family: 'Times New Roman'"
         >Web Application Security Report of&nbsp;</span
@@ -6731,5 +6513,5 @@
         >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
       >
     </p>
-  </div>
+  </div> -->
 </div>

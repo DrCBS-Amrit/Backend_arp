@@ -1,20 +1,20 @@
-const mysql = require('mysql2');
+const mysql = require('mysql2/promise');
 
-const connection = mysql.createConnection({
+const pool = mysql.createPool({
   host: 'localhost',  
   user: 'root',       
   password: '4862',       
   database: 'vulnerabilites_config' 
 });
 
-connection.connect((err) => {
-  if (err) {
-    console.error('Error connecting to MySQL:', err.stack);
-    return;
-  }
-  console.log('Connected to MySQL as id ' + connection.threadId);
-});
+// connection.connect((err) => {
+//   if (err) {
+//     console.error('Error connecting to MySQL:', err.stack);
+//     return;
+//   }
+//   console.log('Connected to MySQL as id ' + connection.threadId);
+// });
 
-module.exports = connection;
+module.exports = pool;
 
 
