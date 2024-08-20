@@ -1,22 +1,10 @@
-<% let pageNumber=1;
-let pageNumbers = {
-  introduction: 1,
-  engagementScope: 1,
-  detailsOfAuditingTeam: 1,
-  auditActivitiesAndTimelines: 1,
-  auditMethodologyAndCriteria: 1,
-  toolsSoftwareUsed: 1,
-  executiveSummary: 1,
-  detailedObservations: 1,
-  conclusion: 1,
-  recommendations: 1
-}; 
-%>
+<% let pageNumber=1; %>
 
 <div>
   <div style="clear: both">
     <div class="page">
 <p>
+  
 <img
     src="https://myfiles.space/user_files/230562_d410107d024c242f/1722583726_01-web-application-security-report-of-1/1722583726_01-web-application-security-report-of-1-3.png"
     width="165"
@@ -1351,7 +1339,7 @@ let pageNumbers = {
     <strong
       ><span
         style="
-          width: 406.28pt;
+          width: 402pt;
           font-family: 'Lucida Console';
           display: inline-block;
         "
@@ -1399,7 +1387,7 @@ let pageNumbers = {
     ><strong
       ><span
         style="
-          width: 305pt;
+          width: 300pt;
           font-family: 'Lucida Console';
           display: inline-block;
         "
@@ -1423,7 +1411,7 @@ let pageNumbers = {
     ><strong
       ><span
         style="
-          width: 295pt;
+          width: 285pt;
           font-family: 'Lucida Console';
           display: inline-block;
         "
@@ -1447,7 +1435,7 @@ let pageNumbers = {
     ><strong
       ><span
         style="
-          width: 77pt;
+          width: 64pt;
           font-family: 'Lucida Console';
           display: inline-block;
         "
@@ -1526,7 +1514,7 @@ let pageNumbers = {
         "
         ></span
       ></strong
-    ><strong><span style="font-family: 'Times New Roman'">10</span></strong>
+    ><strong><span style="font-family: 'Times New Roman'"><span id="pageNumbertoD"></span></span></strong>
   </p><br>
   <p
     style="
@@ -1548,7 +1536,7 @@ let pageNumbers = {
         "
         ></span
       ></strong
-    ><strong><span style="font-family: 'Times New Roman'">14</span></strong
+    ><strong><span style="font-family: 'Times New Roman'"><span id="pageNumbertoC"></span></strong
     ><br />
     <br><strong
       ><span style="font-family: 'Times New Roman'"
@@ -1563,7 +1551,7 @@ let pageNumbers = {
         "
         ></span
       ></strong
-    ><strong><span style="font-family: 'Times New Roman'">15</span></strong>
+    ><strong><span style="font-family: 'Times New Roman'"><span id="pageNumberDisplay"></span></p></span></strong>
   </p>
   <p style=" margin-top: 80pt;
   margin-bottom: 0pt;
@@ -2833,7 +2821,7 @@ let pageNumbers = {
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=NOE1%></span
               ></strong
             >
           </p>
@@ -2863,7 +2851,7 @@ let pageNumbers = {
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=Des_E1%></span
               ></strong
             >
           </p>
@@ -2891,7 +2879,7 @@ let pageNumbers = {
               font-size: 12pt;
             "
           >
-            <span style="font-family: 'Times New Roman'">&nbsp;</span>
+            <span style="font-family: 'Times New Roman'"><%=emai_E1%></span>
           </p>
         </td>
         <td
@@ -2918,7 +2906,7 @@ let pageNumbers = {
               font-size: 10pt;
             "
           >
-            <span style="font-family: Wingdings; font-size: 9pt"></span
+            <span style="font-family: Wingdings; font-size: 9pt"></span
             ><span
               style="
                 width: 14.28pt;
@@ -2926,7 +2914,7 @@ let pageNumbers = {
                 display: inline-block;
               "
               >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
-            ><span style="font-family: 'Times New Roman'">&nbsp;</span>
+            ><span style="font-family: 'Times New Roman'"><%=qualifications1%></span>
           </p>
         </td>
         <td
@@ -2952,7 +2940,7 @@ let pageNumbers = {
           >
             <strong
               ><span style="font-family: 'Times New Roman'"
-                >&nbsp;</span
+                ><%=CertIn1%></span
               ></strong
             >
           </p>
@@ -5273,7 +5261,7 @@ let pageNumbers = {
     <table
     cellspacing="0"
     cellpadding="0"
-    style=" border: 0.75pt solid #000000; border-collapse: collapse; margin-left: 20pt; margin-right: 20pt;"
+    style=" border: 0.75pt solid #000000; border-collapse: collapse; margin-left: 20pt; margin-right: 20pt; "
   >
     <tbody>
       <tr style="height: 22.8pt">
@@ -5424,6 +5412,7 @@ let pageNumbers = {
             padding-left: 5.03pt;
             vertical-align: middle;
             background-color: #e5e5e5;
+
           "
         >
           <p
@@ -5442,7 +5431,9 @@ let pageNumbers = {
           </p>
         </td>
       </tr>
-      <tr style="height: 21.3pt">
+    <!-- style=" border: 0.75pt solid #000000; border-collapse: collapse; margin-left: 20pt; margin-right: 20pt; " -->
+     <div>&nbsp;</div>
+      <tr style="height: 21.3pt;page-break-inside: avoid;">
         <td
           style="
             width: 8.96%;
@@ -5581,7 +5572,7 @@ let pageNumbers = {
 </tr>
 <% let rowNumber = 1; %>
 <% data.data.forEach(function(data){%>
-<tr style="height: 52.45pt">
+<tr style="height: 52.45pt; page-break-inside: avoid;">
   <td style="width: 8.96%; border-top-style: solid; border-top-width: 0.75pt; border-right-style: solid; border-right-width: 0.75pt; border-bottom-style: solid; border-bottom-width: 0.75pt; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
     <p style="margin-top: 0pt; margin-left: 21.25pt; margin-bottom: 20pt;  text-indent: -21.25pt; text-align: center; font-size: 12pt;">
       <strong><span style="font-family: 'Times New Roman'"><%= serialNumber %>.<%= rowNumber%></span></strong>
@@ -5619,7 +5610,7 @@ let pageNumbers = {
 
     </tbody>
   </table>
-  <div class="footer" style="text-align: left; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 40vh; margin-left:80px; position: absolute;">
+  <div class="footer" style="text-align: left; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 20vh; margin-left:80px; position: absolute;">
     Web Application Security Report of <%=website_name%> 
     <div style="float:right; margin-left: 100px"> Page No.<%= pageNumber %></div>
   </div>
@@ -6251,16 +6242,17 @@ let pageNumbers = {
     </table>
     <div class="footer" style="text-align: left; font-family: 'Times New Roman'; font-size: 12pt; margin-top: -30pt; margin-left:80px; position:absolute;">
       Web Application Security Report of <%=website_name%> 
-      <div style="float:right; margin-left: 200pt"> Page No.<%= pageNumber %></div>
+      <div id='myDiv1'style="float:right; margin-left: 100pt"> Page No.<%= pageNumber %></div>
     </div>
+    <% pageNumber++ ; %>
   </div>
   <% observed_serialNumber++; %>
   <%});%>
-   
+  
 </div>
-<!-- <% pageNumber-- ; %> -->
-<% pageNumber++ ; %>
+
 <%pageNumber++ ; %>
+<%pageNumber-- ; %>
 <div style="page-break-before: always;"></div>
   <div class="page">
     <p style=" margin-top: 20pt;
@@ -6327,7 +6319,7 @@ let pageNumbers = {
   </p>
   <div class="footer" style="text-align: left; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 60vh; margin-left:80px">
     Web Application Security Report of <%=website_name%> 
-    <div style="float:right; margin-right: 100px"> Page No.<%= pageNumber %></div>
+    <div id='myDiv2' style="float:right; margin-right: 100px"> Page No.<%= pageNumber %></div>
   </div>
   </div>
   <% pageNumber++ ; %>
@@ -6491,8 +6483,62 @@ let pageNumbers = {
   </p>
   <div class="footer" style="text-align: left; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 25vh; margin-left:80px">
     Web Application Security Report of <%=website_name%> 
-    <div style="float:right; margin-right: 100px"> Page No.<%= pageNumber %></div>
+    <div id='myDiv' style="float:right; margin-right: 100px;"> Page No.<%= pageNumber %></div>
   </div>
+ 
 </div>
-  
+
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the text content of the div
+    const myDivText = document.getElementById('myDiv').textContent;
+    console.log('Original Text:', myDivText);
+
+    // Extract the page number
+    const pageNumberMatch = myDivText.match(/Page No\.(\d+)/);
+    const pageNumber = pageNumberMatch ? pageNumberMatch[1] : 'Not found';
+
+    // Log the extracted page number
+    console.log('Extracted Page Number:', pageNumber);
+
+    // Set the page number in the <p> tag
+    const pageNumberDisplay = document.getElementById('pageNumberDisplay');
+    pageNumberDisplay.textContent = '' + pageNumber;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the text content of the div
+    const myDivText = document.getElementById('myDiv1').textContent;
+    console.log('Original Text:', myDivText);
+
+    // Extract the page number
+    const pageNumberMatch = myDivText.match(/Page No\.(\d+)/);
+    const pageNumber = pageNumberMatch ? pageNumberMatch[1] : 'Not found';
+
+    // Log the extracted page number
+    console.log('Extracted Page Number:', pageNumber);
+
+    // Set the page number in the <p> tag
+    const pageNumberDisplay = document.getElementById('pageNumbertoD');
+    pageNumberDisplay.textContent = '' + pageNumber;
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the text content of the div
+    const myDivText = document.getElementById('myDiv2').textContent;
+    console.log('Original Text:', myDivText);
+
+    // Extract the page number
+    const pageNumberMatch = myDivText.match(/Page No\.(\d+)/);
+    const pageNumber = pageNumberMatch ? pageNumberMatch[1] : 'Not found';
+
+    // Log the extracted page number
+    console.log('Extracted Page Number:', pageNumber);
+
+    // Set the page number in the <p> tag
+    const pageNumberDisplay = document.getElementById('pageNumbertoC');
+    pageNumberDisplay.textContent = '' + pageNumber;
+  });
+</script>
+
