@@ -5566,7 +5566,12 @@
 
 <% let serialNumber = 1; %>
 <% groupedVulnerabilities.forEach(function(data) { %>
-<tr style="height: 22.9pt">
+  <% if (serialNumber % 6 === 0) { %>
+    <tr style="page-break-after: always; margin-top: 30pt;">
+      <td colspan="5"></td>
+    </tr>
+  <% } %>
+
   <td colspan="5" style="border-top-style: solid; border-top-width: 0.75pt; border-bottom-style: solid; border-bottom-width: 0.75pt; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
     <div style="margin: 0pt; padding-left: 0pt">
       <div style="text-align: center; font-family: 'Times New Roman'; font-size: 14pt; font-weight: bold; list-style-position: inside;">
@@ -5613,14 +5618,15 @@
 <% }); %>
 
 
-    </tbody>
+    </tbody>  
   </table>
   <div class="footer" style="text-align: left; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 20vh; margin-left:80px; position: absolute;">
     Web Application Security Report of <%=website_name%> 
     <div style="float:right; margin-left: 100px"> Page No.<%= pageNumber %></div>
   </div>
-  <p style="page-break-after: always;"></p>
+  
   </div>
+  <p style="page-break-after: always;"></p>
   <% pageNumber++ ; %>
   <div class="page">
     <p style=" margin-top: 30pt;
