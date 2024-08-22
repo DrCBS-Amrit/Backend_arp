@@ -5235,7 +5235,7 @@
       ></strong
     >
   </p>
-  <p
+  <!-- <p
     style="
       margin-top: 0pt;
       margin-bottom: 0pt;
@@ -5261,7 +5261,7 @@
   >
     <strong><span style="font-family: 'Times New Roman'">&nbsp;</span></strong>
   </p>
-  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p>
+  <p style="margin-top: 0pt; margin-bottom: 10pt">&nbsp;</p> -->
 
     <table
     cellspacing="0"
@@ -5567,11 +5567,16 @@
 <% let serialNumber = 1; %>
 <% groupedVulnerabilities.forEach(function(data) { %>
   <% if (serialNumber % 6 === 0) { %>
-    <tr style="page-break-after: always; margin-top: 30pt;">
-      <td colspan="5"></td>
-    </tr>
+    <div class="footer" style="text-align: left; font-family: 'Times New Roman'; font-size: 12pt; margin-top: 60vh; margin-left:80px; position: absolute;">
+      Web Application Security Report of <%=website_name%> 
+      <div style="float:right; margin-left: 100px"> Page No.<%= pageNumber %></div>
+    </div>
+    <tr id="spacer-<%= serialNumber %>" style="page-break-after: always;"></tr>
+    <script>
+      document.getElementById('spacer-<%= serialNumber %>').style.marginTop = '20pt';
+    </script>
   <% } %>
-
+  
   <td colspan="5" style="border-top-style: solid; border-top-width: 0.75pt; border-bottom-style: solid; border-bottom-width: 0.75pt; padding-right: 5.03pt; padding-left: 5.03pt; vertical-align: middle;">
     <div style="margin: 0pt; padding-left: 0pt">
       <div style="text-align: center; font-family: 'Times New Roman'; font-size: 14pt; font-weight: bold; list-style-position: inside;">
