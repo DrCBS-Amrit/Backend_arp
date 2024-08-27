@@ -19,6 +19,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/uploads', express.static(path.join(__dirname, '../public/uploads')));
 app.use('/', vulnerabilityRoutes);
 
+
 // app.post('/api/login', async (req, res) => {
 //   const { employeeId, password } = req.body;
 
@@ -103,6 +104,21 @@ app.post('/api/register', async (req, res) => {
   }
 });
 
+app.get('/api/dashboard-stats', (req, res) => {
+  const sql = 'SELECT * FROM EmployeeTasksInfo';
+  db.query(sql, (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+
+app.get('/api/completed-tasks', (req, res) => {
+  const sql = 'SELECT * FROM EmployeeTasksInfo WHERE status = "completed"';
+  db.query(sql, (err, results) => {
+    if (err) throw err;
+    res.json(results);
+  });
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
